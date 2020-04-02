@@ -1,7 +1,7 @@
 {
   "name": "shopping-cart",
   "version": "1.0.0",
-  "description": "With that boilerplate you should be able to runn a simple e commerce platform.",
+  "description": "With that boilerplate you should be able to run a simple e commerce platform.",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
