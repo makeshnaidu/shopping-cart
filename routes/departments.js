@@ -23,7 +23,7 @@ const departments = (req, res) => {
             description: "SonyHeadphones, Black MDRZX110B1 ea",
             price: 29.99,
             rating: 5,
-            image: "https://assets.sellers.loblaw.ca/products/all/1090/29909_1.jpg?size=274"
+            image: "https://assets.sellers.loblaw.ca/products/all/1090/29909_1.jpg"
         },
         {
             id:1,
@@ -31,7 +31,7 @@ const departments = (req, res) => {
             description: "AudiovoxHDMI Cable, 12 ft",
             price: 9.99,
             rating: 5,
-            image: "https://assets.sellers.loblaw.ca/products/all/1090/29863_1.jpg?size=274"
+            image: "https://assets.sellers.loblaw.ca/products/all/1090/29863_1.jpg"
         }
         
     ]

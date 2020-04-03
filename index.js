@@ -9,8 +9,10 @@ app.use(express.static('public'))
 //Modules
 const home = require('./routes/home.js')
 const departments = require('./routes/departments.js')
+const admin = rewuire('./routes/admin.js')
 
 app.get('/', home)
 app.get('/departments', departments)
+app.get('/admin', admin)
 
 app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))

@@ -18,7 +18,8 @@ block content
                     .card-body
                     h5.card-title= product.name
                     p.card-text= product.description
-                    p=product.price
+                    p.card-text Price: $ #{product.price}
+                    p.text-muted Rating: #{product.rating}
                     a.btn.btn-primary(href='#') Buy now
 
     
