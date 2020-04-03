@@ -1,6 +1,6 @@
-const create = (req, res) => {
+const adminCreate = (req, res) => {
     res.render('admin/create')
 }
 
 
-module.exports = create;
+module.exports = adminCreate;
