@@ -1,7 +1,9 @@
 extends ../template.pug
         
 block content
+    a.btn.btn-primary(href='/admin/create') Create
     h1 Welcome to GalaxyStore Departments, where you find all your needs
+    br
 
     .card.text-center
         .card-header
@@ -10,6 +12,7 @@ block content
             h5.card-title Online Deals for Work From Home
             p.card-text Shop from the comfort of your home and get delivered at your door steps*
             a.btn.btn-primary(href='#') Go Shopping
+    br
     .row
         each product in products
             .col-sm-3
@@ -23,7 +26,10 @@ block content
                     a.btn.btn-info(href='#') Update
                     a.btn.btn-danger(href='#') Delete
 
-    
+    br
+    br
+    br
+    br
        
             
 
