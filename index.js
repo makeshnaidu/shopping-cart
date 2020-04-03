@@ -9,7 +9,7 @@ app.use(express.static('public'))
 //Modules
 const home = require('./routes/home.js')
 const departments = require('./routes/departments.js')
-const admin = rewuire('./routes/admin.js')
+const admin = require('./routes/admin.js')
 
 app.get('/', home)
 app.get('/departments', departments)
