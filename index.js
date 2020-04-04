@@ -1,10 +1,14 @@
 const express = require('express')
 const app = express()
+var bodyParser = require('body-parser')
 const port =process.env.port || 3000
 
 //Middlewares
 app.set('view engine', 'pug')
 app.use(express.static('public'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
 
 //Modules
 const home = require('./routes/home.js')
@@ -22,7 +26,7 @@ app.get('/admin', adminIndex)
 app.get('/admin/create', adminCreate)
 app.post('/admin/create', adminCreatePost)
 app.get('/admin/update', adminUpdate)
-app.get('/admin/delete', adminDelete)
+app.get('/admin/delete/:id', adminDelete)
 
 //Server Activation
 app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))

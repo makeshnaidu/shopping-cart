@@ -7,21 +7,21 @@ block content
         .form-group.row
             label.col-sm-2.col-form-label(for='inputName') Name
             .col-sm-10
-                input#inputName.form-control(type='text' placeholder ='Name')
+                input#inputName.form-control(type='text' placeholder ='Name' name="name")
         .form-group.row
             label.col-sm-2.col-form-label(for='inputDescription') Description
             .col-sm-10
-                input#inputDescription.form-control(type='text' placeholder ='Desctiption')
+                input#inputDescription.form-control(type='text' placeholder ='Desctiption' name="description")
         .form-group.row
             label.col-sm-2.col-form-label(for='inputPrice') Price
             .col-sm-10
-                input#inputPrice.form-control(type='number' placeholder ='Price')
+                input#inputPrice.form-control(type='number' placeholder ='Price' name="price")
         .form-group.row
             label.col-sm-2.col-form-label(for='inputRating') Rating
             .col-sm-10
-                input#inputRating.form-control(type='number' placeholder ='Rating')
+                input#inputRating.form-control(type='number' placeholder ='Rating' name="rating")
         .form-group.row
             label.col-sm-2.col-form-label(for='inputImage') Image
             .col-sm-10
-                input#inputImage.form-control(type='url' placeholder ='Image url')
+                input#inputImage.form-control(type='text' placeholder ='Image' name="image")
         button.btn.btn-primary(href='/admin/create') Create
