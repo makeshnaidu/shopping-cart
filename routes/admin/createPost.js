@@ -15,7 +15,7 @@ const adminCreate = async (req, res) => {
         image: req.body.image
     }
     
-    const product = new Product(newProduct).save()
+    const product = await new Product(newProduct).save()
     console.log("New Product: ", product)
     res.redirect('/admin');
 }

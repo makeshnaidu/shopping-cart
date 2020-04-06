@@ -22,6 +22,7 @@ const adminIndex = require('./routes/admin/index.js')
 const adminCreate = require('./routes/admin/create.js')
 const adminCreatePost = require('./routes/admin/createPost.js')
 const adminUpdate = require('./routes/admin/update.js')
+const adminUpdatePost = require('./routes/admin/updatePost.js')
 const adminDelete = require('./routes/admin/delete.js')
 
 //Routes
@@ -30,7 +31,8 @@ app.get('/departments', departments)
 app.get('/admin', adminIndex)
 app.get('/admin/create', adminCreate)
 app.post('/admin/create', adminCreatePost)
-app.get('/admin/update', adminUpdate)
+app.get('/admin/update/:id', adminUpdate)
+app.post('/admin/update/:id', adminUpdatePost)
 app.get('/admin/delete/:id', adminDelete)
 
 //Server Activation
