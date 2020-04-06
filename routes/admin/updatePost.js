@@ -2,7 +2,7 @@ const Product = require('../../models/product')
 
 const adminUpdate = async (req, res) => {
 
-    const idToUpdate = req.params.id;
+    const idToUpdate = req.body.id;
 
     const updateProduct ={
         name: req.body.name,
@@ -14,6 +14,7 @@ const adminUpdate = async (req, res) => {
 
     let filter = {_id: idToUpdate};
     let result = await Product.updateOne(filter, updateProduct).exec();
+    console.log("Result: ", result)
     res.redirect('/admin');
 }
 

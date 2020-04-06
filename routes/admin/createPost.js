@@ -1,12 +1,7 @@
 const Product = require('../../models/product')
 
 const adminCreate = async (req, res) => {
-    // console.log("Name:", req.body.name)
-    // console.log("Description:", req.body.description)
-    // console.log("Price:", req.body.price)
-    // console.log("Rating:", req.body.rating)
-    // console.log("Image:", req.body.image)
-    
+
     const newProduct ={
         name: req.body.name,
         description: req.body.description,
