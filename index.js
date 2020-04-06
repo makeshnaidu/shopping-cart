@@ -24,6 +24,8 @@ const adminCreatePost = require('./routes/admin/createPost.js')
 const adminUpdate = require('./routes/admin/update.js')
 const adminUpdatePost = require('./routes/admin/updatePost.js')
 const adminDelete = require('./routes/admin/delete.js')
+const flyers = require('./routes/flyers.js')
+
 
 //Routes
 app.get('/', home)
@@ -34,6 +36,7 @@ app.post('/admin/create', adminCreatePost)
 app.get('/admin/update/:id', adminUpdate)
 app.post('/admin/update/:id', adminUpdatePost)
 app.get('/admin/delete/:id', adminDelete)
+app.get('/flyers', flyers)
 
 //Server Activation
 app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
