@@ -2,7 +2,7 @@ const Product = require('../../models/product')
 
 const adminUpdate = async (req, res) => {
 
-    const idToUpdate = req.body.id;
+    const idToUpdate = req.params.id;
 
     const updateProduct ={
         name: req.body.name,
