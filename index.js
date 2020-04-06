@@ -3,11 +3,17 @@ const express = require('express')
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
-const port =process.env.port || 3000
+let port = process.env.PORT
+if(port == null || port =="") {
+    port = 3000
+}
 
 //Database Connection
 const uri = process.env.MONGODB_URL;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
+    app.listen(port)
+});
+// mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Middlewares
 app.set('view engine', 'pug')
@@ -40,4 +46,4 @@ app.get('/admin/delete/:id', adminDelete)
 app.get('/flyers', flyers)
 
 //Server Activation
-app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
+// app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
