@@ -1,8 +1,8 @@
-require('dotenv/config');
 const express = require('express')
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
+require('dotenv/config');
 let port = process.env.PORT
 if(port == null || port =="") {
     port = 3000
