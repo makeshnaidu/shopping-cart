@@ -11,7 +11,8 @@ if(port == null || port =="") {
 //Database Connection
 const uri = process.env.MONGODB_URL;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
-    app.listen(port)
+    app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
+    
 });
 // mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
