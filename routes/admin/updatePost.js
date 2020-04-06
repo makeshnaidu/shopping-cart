@@ -14,7 +14,6 @@ const adminUpdate = async (req, res) => {
 
     let filter = {_id: idToUpdate};
     let result = await Product.updateOne(filter, updateProduct).exec();
-    console.log("Result: ", result)
     res.redirect('/admin');
 }
 
