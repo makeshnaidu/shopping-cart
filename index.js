@@ -1,16 +1,16 @@
+require('dotenv/config');
 const express = require('express')
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
-require('dotenv/config');
 let port = process.env.PORT
 if(port == null || port =="") {
     port = 3000
 }
 
 //Database Connection
-// const uri = process.env.MONGODB_URL;
-mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
+const uri = process.env.MONGODB_URL;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
     app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
     
 });
