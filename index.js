@@ -18,7 +18,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, funct
     app.listen(port, () => console.log(`Shopping cart running on port ${port}!`))
     
 });
-// mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 //Middlewares
 app.set('view engine', 'pug')
