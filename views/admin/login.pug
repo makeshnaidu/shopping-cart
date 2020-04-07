@@ -1,0 +1,19 @@
+extends ../template.pug
+        
+block content
+    .container
+        h1 Welcome to Login
+        
+        form(action="" method="p")
+            .form-group.row
+                label.col-sm-1.col-form-label(for='inputUserName') Username
+                .col-sm-4
+                    input#inputName.form-control(type='text' placeholder ='Username' name="userName")
+            .form-group.row
+                label.col-sm-1.col-form-label(for='inputPassword') Password
+                .col-sm-4
+                    input#inputDescription.form-control(type='password' placeholder ='Password' name="password")
+        
+            button.btn.btn-primary(href='#') Login
+            br
+        
